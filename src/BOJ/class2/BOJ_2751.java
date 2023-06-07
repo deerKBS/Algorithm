@@ -21,6 +21,7 @@ public class BOJ_2751 {
 				sb.append(i-1000000).append("\n");
 			}
 		}
+		
 		System.out.println(sb);
 	}
 }
