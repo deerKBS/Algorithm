@@ -32,5 +32,4 @@ public class BOJ_11650 {
 		}
 		System.out.println(sb);
 	}
-
 }
