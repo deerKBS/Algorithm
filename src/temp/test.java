@@ -10,5 +10,6 @@ public class test {
 			sb.append(st.nextToken().charAt(0));
 		}
 		System.out.println(sb);
+		System.out.println("test");
 	}
 }
