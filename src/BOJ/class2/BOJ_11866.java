@@ -22,8 +22,7 @@ public class BOJ_11866 {
 		
 		int i=0;
 		while(q.size()!=1) {
-			i++;
-			if(i==K) {
+			if(i++==K) {
 				i=0;
 				sb.append(q.poll()).append(", ");
 			}
