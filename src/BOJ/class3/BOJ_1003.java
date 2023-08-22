@@ -4,31 +4,27 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class BOJ_1003 {
-    static int count0;
-    static int count1;
+    static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
         int T = Integer.parseInt(br.readLine());
 
         for(int tc=0; tc<T; tc++){
-            count0=0;
-            count1=0;
-            fibonacci(Integer.parseInt(br.readLine()));
-            sb.append(count0).append(' ').append(count1).append("\n");
+            int N = Integer.parseInt(br.readLine());
+            if(N<1) sb.append("1 0\n");
+            else fibonacci(N);
         }
         System.out.print(sb);
     }
 
-    public static int fibonacci(int n){
-        if(n==0){
-            count0++;
-            return 0;
-        }else if(n==1){
-            count1++;
-            return 1;
-        }else{
-            return fibonacci(n-1)+fibonacci(n-2);
+    public static void fibonacci(int N){
+        int[][] fib = new int[N+1][2];
+        fib[0][0]+=1;
+        fib[1][1]+=1;
+        for(int i=2; i<=N; i++){
+            fib[i][0]=fib[i-2][0]+fib[i-1][0];
+            fib[i][1]=fib[i-2][1]+fib[i-1][1];
         }
+        sb.append(fib[N][0]).append(' ').append(fib[N][1]).append("\n");
     }
 }
