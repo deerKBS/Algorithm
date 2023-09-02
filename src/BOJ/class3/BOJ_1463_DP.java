@@ -1,3 +1,5 @@
+package BOJ.class3;
+
 import java.io.*;
 
 public class BOJ_1463_DP {
