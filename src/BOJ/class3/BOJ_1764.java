@@ -11,16 +11,16 @@ public class BOJ_1764 {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		Map<String, Boolean> map = new HashMap<>();
+		Set<String> map = new HashSet<>();
 		
 		for(int i=0; i<N; i++) {
-			map.put(br.readLine(), true);
+			map.add(br.readLine());
 		}
 		
 		List<String> list = new ArrayList<>();
 		for(int i=0; i<M; i++) {
 			String str = br.readLine();
-			if(map.containsKey(str)) {
+			if(map.contains(str)) {
 				list.add(str);
 			}
 		}
